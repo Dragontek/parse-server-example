@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "parse-server-example",
+    "name": "parse-server",
     "annotations": {
       "description": "An example Parse API server using the parse-server module",
       "tags": "quickstart,nodejs,mongodb,parse",
@@ -517,7 +517,8 @@
       "name": "MASTER_KEY",
       "displayName": "Parse Master Key",
       "description": "A key that overrides all permissions. Keep this secret",
-      "value": ""
+      "generate": "expression",
+      "from": "[a-zA-Z0-9]{40}"
     },
     {
       "name": "PARSE_MOUNT",
